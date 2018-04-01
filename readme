@@ -1,0 +1,87 @@
+------------------------------------------------
+Submission zip contains the following files. 
+------------------------------------------------
+
+readme
+sim8
+sv_uvm
+simres_lcd1
+simres_lcd2
+simres_lcd3
+LCD_CONTROLLER_ARB_agent.sv
+LCD_CONTROLLER_ARB_driver.sv
+LCD_CONTROLLER_env.sv
+LCD_CONTROLLER_MASTER_agent.sv
+LCD_CONTROLLER_MASTER_driver.sv
+LCD_CONTROLLER_MASTER_monitor.sv
+LCD_CONTROLLER_MASTER_req_item.sv
+LCD_CONTROLLER_MASTER_seq_lib.sv
+LCD_CONTROLLER_MASTER_sequencer.sv
+LCD_CONTROLLER_OUTPUT_agent.sv
+LCD_CONTROLLER_OUTPUT_env.sv
+LCD_CONTROLLER_OUTPUT_monitor.sv
+LCD_CONTROLLER_OUTPUT_msg.sv
+LCD_CONTROLLER_pkg.sv
+LCD_CONTROLLER_scoreboard.sv
+LCD_CONTROLLER_SLAVE_agent.sv
+LCD_CONTROLLER_SLAVE_driver.sv
+LCD_CONTROLLER_SLAVE_monitor.sv
+LCD_CONTROLLER_SLAVE_resp_item.sv
+LCD_CONTROLLER_SLAVE_seq_lib.sv
+LCD_CONTROLLER_SLAVE_sequencer.sv
+LCD_CONTROLLER_test_lib.sv
+LCD_CONTROLLER_top.sv
+
+
+
+-------------------------------------------------
+BELOW ARE COMMANDS TO RUN ALL THE THREE DUTS
+-------------------------------------------------
+./sv_uvm LCD_CONTROLLER_top_lcd1.sv
+./sv_uvm LCD_CONTROLLER_top_lcd2.sv
+./sv_uvm LCD_CONTROLLER_top_lcd3.sv
+
+
+
+
+--------------------------------
+HOW TO RUN
+--------------------------------
+
+1. Below urgument FORMAT has to be passed to sv_uvm script so that files are passed simulation time.
+
+    ./simv +272test=t0.txt | tee simres.txt
+    
+    
+   ELSE
+   
+   JUST RUN THE SV_UVM GIVEN IN THE SUBMISSION DIRECOTRY.
+    
+2.  Below is the command to be run for all the three testcase 
+    
+    ./sv_uvm LCD_CONTROLLER_top_lcd1.sv
+    ./sv_uvm LCD_CONTROLLER_top_lcd2.sv
+    ./sv_uvm LCD_CONTROLLER_top_lcd3.sv
+    
+
+  
+  
+------------------------------
+VERIFICATION STATUS 
+------------------------------
+
+DUT1:
+CONFIG REGISTERS HAVE TO BE RUN ON TWO CLOCK CYCLES. DOES NOT VIOLATE AHB PROTOCOL. 
+BUT LCD_1 REQUIRES CONGIF TO BE RUN ON TWO CYCLES.
+
+
+DUT2:
+FAILED FOR ALL THE TESTCASES FOR DATA MISMATCH.
+
+
+DUT3:
+FAILED FOR ALL THE TESTCASES FOR BECAUSE LCDFP MISMATCH.
+
+
+
+

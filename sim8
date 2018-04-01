@@ -1,0 +1,20 @@
+#!/usr/bin/csh
+
+./simv +272test=t0.txt  | tee simres.txt
+./simv +272test=t1.txt  | tee -a simres.txt
+./simv +272test=t2.txt  | tee -a simres.txt
+./simv +272test=t3.txt  | tee -a simres.txt
+./simv +272test=t4.txt  | tee -a simres.txt
+./simv +272test=t5.txt  | tee -a simres.txt
+./simv +272test=t6.txt  | tee -a simres.txt
+./simv +272test=t7.txt  | tee -a simres.txt
+./simv +272test=t8.txt  | tee -a simres.txt
+./simv +272test=t9.txt  | tee -a simres.txt
+./simv +272test=t10.txt | tee -a simres.txt
+./simv +272test=t11.txt | tee -a simres.txt
+./simv +272test=t12.txt | tee -a simres.txt
+./simv +272test=t13.txt | tee -a simres.txt
+./simv +272test=t14.txt | tee -a simres.txt
+./simv +272test=t15.txt | tee -a simres.txt
+grep -i error simres.txt
+
